@@ -1,0 +1,50 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "main": "dist/server.js",
+  "private": true,
+  "scripts": {
+    "test:unit": "NODE_ENV=TEST ts-node node_modules/.bin/jasmine './src/**/*.spec.ts' --stop-on-failure=false --random=true",
+    "test:unit:watch": "ts-node-dev --respawn --no-notify --no-deps --transpileOnly ./node_modules/.bin/jasmine './src/**/*.spec.ts' --stop-on-failure=false --random=true",
+    "test:api": "NODE_ENV=TEST ts-node --project ./spec/tsconfig.json node_modules/.bin/jasmine './spec/api/**/*.spec.ts' --stop-on-failure=false --random=true",
+    "test:all": "yarn lint && yarn prettier && yarn test:unit && yarn test:api",
+    "start": "nodemon --delay 700ms -w 'src/**/*.ts' -e ts -x 'ts-node -r ./src/server.ts'",
+    "start:osx": "cd src && ../bin/inotify-proxy | yarn start",
+    "dev": "nodemon --delay 700ms -w 'src/**/*.ts' -e ts -x 'yarn test:unit:watch && yarn start'",
+    "dev:osx": "cd src && ../bin/inotify-proxy | yarn dev",
+    "build": "rm -rf ./dist && webpack --config ./webpack.config.js",
+    "build:serve": "yarn build && node -r ./dist/foto-ch-server.bundle.js",
+    "lint": "tslint -p ./tsconfig.json",
+    "prettier": "prettier -l './src/**/*.ts'"
+  },
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.4.0",
+    "koa-send": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.3.9",
+    "@types/koa": "^2.0.48",
+    "@types/koa-json": "^2.0.18",
+    "@types/koa-router": "^7.0.39",
+    "@types/koa-send": "^4.1.1",
+    "@types/proxyquire": "^1.3.28",
+    "@types/supertest": "^2.0.7",
+    "copy-webpack-plugin": "^5.0.0",
+    "jasmine": "^3.3.1",
+    "nodemon": "^1.18.10",
+    "prettier": "^1.16.4",
+    "proxyquire": "^2.1.0",
+    "source-map-support": "^0.5.10",
+    "supertest": "^3.4.2",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.2",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "interface-name": [true, "never-prefix"],
+    "max-file-line-count": [true, 300],
+    "newline-before-return": true,
+    "no-inferrable-types": [true, "ignore-params", "ignore-properties"],
+    "no-invalid-this": true,
+    "no-namespace": [true, "allow-declarations"],
+    "no-non-null-assertion": true,
+    "no-null-keyword": true,
+    "no-require-imports": true,
+    "no-switch-case-fall-through": true,
+    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "prefer-function-over-method": [true, "allow-public"],
+    "no-implicit-dependencies": [true, "dev"],
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": false,
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "member-variable-declaration"
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ],
+    "ordered-imports": [
+      true,
+      {
+        "named-imports-order": "lowercase-last"
+      }
+    ]
+  }
+}
