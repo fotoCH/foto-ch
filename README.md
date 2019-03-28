@@ -10,8 +10,8 @@ Ablösung der bestehenden fotoCH-Plattformen (www und intern) durch aktuelle Tec
 
 ## Technologien
  - Frontend: Angular
- - API: NodeJS, Koa, GraphQL
- - DB: Postgres, MariaDB
+ - API: Koa (NodeJS), GraphQL
+ - DB: Postgres
  - Container: Docker
  
  ## Datenbank / Migration
