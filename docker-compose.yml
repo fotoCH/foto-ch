@@ -1,0 +1,64 @@
+version: '3'
+services:
+  db:
+    image: 'postgres'
+    command: postgres -c fsync=off
+    environment:
+      POSTGRES_PASSWORD: postgresdbrocks
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      default:
+      fotoch-suite:
+        aliases:
+          - foto-ch-db
+
+  client:
+    build:
+      context: .
+      dockerfile: client/docker/client/Dockerfile
+    command: /app/client/docker/client/start
+    working_dir: /app/client
+    volumes:
+      - ./:/app
+      - yarn-cache:/usr/local/share/.cache/yarn
+    ports:
+      - "4200:4200"
+
+  server:
+    build:
+      context: .
+      dockerfile: server/docker/server/Dockerfile
+    command: /app/server/docker/server/start
+    working_dir: /app/server
+    volumes:
+      - ./:/app
+      - yarn-cache:/usr/local/share/.cache/yarn
+    environment:
+      - PORT=4100
+    ports:
+      - "4100:4100"
+    networks:
+      default:
+      fotoch-suite:
+        aliases:
+          - foto-ch-server
+
+  shared:
+    build:
+      context: .
+      dockerfile: shared/docker/shared/Dockerfile
+    command: /app/shared/docker/shared/start
+    working_dir: /app/shared
+    volumes:
+      - ./:/app
+      - yarn-cache:/usr/local/share/.cache/yarn
+
+volumes:
+  yarn-cache:
+  postgres:
+
+networks:
+  fotoch-suite:

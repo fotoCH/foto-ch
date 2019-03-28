@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# install workspace
+yarn --mutex file:/usr/local/share/.cache/yarn/.yarn-mutex
+
+# the "service"
+yarn "${START_TASK:-start}"
