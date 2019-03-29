@@ -4,7 +4,7 @@
 Damit wir zu einer sauberen Datenstruktur kommen, haben wir das neue Schema von Grund auf neu entworfen. Dabei haben wir bewusst in Kauf genommen, dass die Migration aus den bestehenden Daten etwas aufwändig wird.
 
 ## Gedanken zur neuen Datenstruktur
-![Database schema.png](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Datenbank Schema")
+<a href="https://github.com/fotoCH/foto-ch/blob/master/migration/Database_schema.png" target="_blank"><img src="https://github.com/fotoCH/foto-ch/blob/master/migration/Database_schema.png" width="176" height="120"></a>
 
 Die Basis der Datenbank sind die vier Haupt-Tabellen für Objekte, Organisationen, Personen und Sammlungen. Objekte teilen sich weiter in Photos und Literatur auf; Sammlungen teilen sich in Bestände und Ausstellungen auf.
 
