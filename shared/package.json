@@ -1,0 +1,30 @@
+{
+  "name": "shared",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test:unit": "ts-node ./node_modules/.bin/jasmine './src/**/*.spec.ts' --stop-on-failure=false --random=true",
+    "test:unit:watch": "ts-node-dev --respawn --no-notify --no-deps --transpileOnly ./node_modules/.bin/jasmine './src/**/*.spec.ts' --stop-on-failure=false --random=true",
+    "build": "rm -rf ./lib && tsc -p ./tsconfig.build.json",
+    "build:watch": "rm -rf ./lib && tsc -w -p ./tsconfig.build.json",
+    "lint": "tslint -p ./tsconfig.json",
+    "prettier": "prettier -l './src/**/*.ts'",
+    "test:all": "yarn lint && yarn prettier && yarn test:unit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jasmine": "^3.3.9",
+    "jasmine": "^3.3.1",
+    "nodemon": "^1.18.10",
+    "prettier": "^1.16.4",
+    "ts-node": "^8.0.2",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.2.4",
+    "factory.ts": "^0.4.1"
+  }
+}
