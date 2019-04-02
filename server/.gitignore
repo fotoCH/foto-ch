@@ -39,3 +39,6 @@ Thumbs.db
 
 # Local config
 /src/config.json
+
+# Knex dev config
+knexfile.js
