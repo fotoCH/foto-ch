@@ -3,3 +3,7 @@ export interface Photographer {
   firstname: string;
   lastname: string;
 }
+
+export function getDisplayName(photographer: Photographer): string {
+  return `${photographer.firstname} ${photographer.lastname}`;
+}

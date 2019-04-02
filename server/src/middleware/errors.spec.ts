@@ -1,7 +1,7 @@
-import { errorHandler } from "./errors";
+import { errorHandler } from './errors';
 
-describe("#errorHandler", () => {
-  it("calls the next middleware", async () => {
+describe('#errorHandler', () => {
+  it('calls the next middleware', async () => {
     const ctx: any = {};
     const next = jasmine.createSpy();
 
@@ -10,7 +10,7 @@ describe("#errorHandler", () => {
     expect(next).toHaveBeenCalled();
   });
 
-  it("responds with a system error if a general error is thrown", async () => {
+  it('responds with a system error if a general error is thrown', async () => {
     const error: any = new Error();
     const ctx: any = {};
     const next = jasmine.createSpy();
@@ -19,9 +19,9 @@ describe("#errorHandler", () => {
     await errorHandler(ctx, next);
 
     expect(ctx.body).toEqual({
-      name: "SystemError",
+      name: 'SystemError',
       code: 50000,
-      message: "Unexpected error"
+      message: 'Unexpected error'
     });
   });
 });

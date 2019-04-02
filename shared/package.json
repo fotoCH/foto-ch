@@ -12,7 +12,8 @@
     "build:watch": "rm -rf ./lib && tsc -w -p ./tsconfig.build.json",
     "lint": "tslint -p ./tsconfig.json",
     "prettier": "prettier -l './src/**/*.ts'",
-    "test:all": "yarn lint && yarn prettier && yarn test:unit"
+    "test:all": "yarn lint && yarn prettier && yarn test:unit",
+    "test:all:ci": "yarn lint && yarn prettier && yarn test:unit"
   },
   "dependencies": {},
   "devDependencies": {

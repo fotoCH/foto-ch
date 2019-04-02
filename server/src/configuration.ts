@@ -1,25 +1,25 @@
-import { readFileSync } from "fs";
-import { resolve } from "path";
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
 
 interface Configuration {
   exampleConfigValue: string;
 }
 
 export const configuration: Configuration = JSON.parse(
-  readFileSync(resolve(__dirname, "config.json"), { encoding: "utf8" })
+  readFileSync(resolve(__dirname, 'config.json'), { encoding: 'utf8' })
 );
 
 export enum Environments {
-  Development = "development",
-  Test = "test",
-  Production = "production"
+  Development = 'development',
+  Test = 'test',
+  Production = 'production'
 }
 
 export const environment = (() => {
   switch (process.env.NODE_ENV) {
-    case "TEST":
+    case 'TEST':
       return Environments.Test;
-    case "PRODUCTION":
+    case 'PRODUCTION':
       return Environments.Production;
     default:
       return Environments.Development;

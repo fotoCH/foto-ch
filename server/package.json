@@ -8,6 +8,7 @@
     "test:unit:watch": "NODE_ENV=TEST ts-node-dev --respawn --no-notify --no-deps --transpileOnly ./node_modules/.bin/jasmine './src/**/*.spec.ts' --stop-on-failure=false --random=true",
     "test:api": "NODE_ENV=TEST ts-node --project ./spec/tsconfig.json node_modules/.bin/jasmine './spec/api/**/*.spec.ts' --stop-on-failure=false --random=true",
     "test:all": "yarn lint && yarn prettier && yarn test:unit && yarn test:api",
+    "test:all:ci": "yarn lint && yarn prettier && yarn test:unit && yarn test:api",
     "start": "nodemon --delay 700ms -w 'src/**/*.ts' -e ts -x 'ts-node -r ./src/server.ts'",
     "start:osx": "cd src && ../bin/inotify-proxy | yarn start",
     "dev": "nodemon --delay 700ms -w 'src/**/*.ts' -e ts -x 'yarn test:unit:watch && yarn start'",
@@ -24,12 +25,11 @@
     "koa-router": "^7.4.0",
     "koa-send": "^5.0.0",
     "pg": "^7.9.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0"
     "koa-graphql": "",
     "graphql": "",
     "type-graphql": "",
-    "reflect-metadata": ""
+    "reflect-metadata": "",
+    "shared": "0.0.1"
   },
   "devDependencies": {
     "@types/jasmine": "^3.3.9",
@@ -53,8 +53,9 @@
     "ts-node-dev": "^1.0.0-pre.32",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
+    "prettier": "^1.16.4",
     "typescript": "^3.2.4",
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }

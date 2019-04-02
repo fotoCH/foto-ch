@@ -8,9 +8,7 @@ export class Photographer {
   @Field(type => Int)
   public id!: number;
 
-  @Field()
-  public firstname!: string;
+  @Field() public firstname!: string;
 
-  @Field()
-  public lastname!: string;
+  @Field() public lastname!: string;
 }
