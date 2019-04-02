@@ -2,6 +2,7 @@
 ## DB Stuff
 ### Links
 - [Postgresql Basics (Linux)](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
+- [Knex Migrations doumentation](https://knexjs.org/#Migrations-CLI)
 - [Knex Setup Cheat Sheet (we don't use Express!)](https://gist.github.com/laurenfazah/e0b0033cdc40a313d4710cc04e654556)
 - [Knex Commands Cheat Sheet](https://devhints.io/knex)
 
