@@ -2,18 +2,14 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "strict": true,
-    "outDir": "./dist",
+    "outDir": "./lib",
     "sourceMap": true,
     "target": "ES2017",
     "module": "commonjs",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": ["esnext.asynciterable"],
     "typeRoots": [
       "./node_modules/@types",
-      "../node_modules/@types",
-      "./typings"
+      "../node_modules/@types"
     ]
   },
   "include": [

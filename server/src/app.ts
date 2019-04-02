@@ -1,9 +1,9 @@
-import * as Koa from "koa";
-import * as json from "koa-json";
-import { Environments, environment } from "./configuration";
-import { errorHandler } from "./middleware/errors";
-import { timer } from "./middleware/timer";
-import { routes } from "./routes";
+import * as Koa from 'koa';
+import * as json from 'koa-json';
+import { Environments, environment } from './configuration';
+import { errorHandler } from './middleware/errors';
+import { timer } from './middleware/timer';
+import { routes } from './routes';
 
 const app = new Koa();
 

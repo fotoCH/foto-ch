@@ -1,0 +1,33 @@
+sudo: required
+
+branches:
+  only:
+  - master
+
+language: node_js
+
+node_js:
+  - node
+
+addons:
+  chrome: stable
+
+cache:
+  directories:
+    - ~/.cache
+
+before_script:
+    - "sudo chown root /opt/google/chrome/chrome-sandbox"
+    - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
+    - "export DISPLAY=:99.0"
+    - "sh -e /etc/init.d/xvfb start"
+    - sleep 3 # give xvfb some time to start
+
+install:
+  - yarn --frozen-lockfile
+  - cp server/src/config.json.travis server/src/config.json
+
+script:
+  - cd shared && yarn test:all:ci && yarn build
+  - cd ../client && yarn test:all:ci
+  - cd ../server && yarn test:all:ci
