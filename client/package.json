@@ -11,7 +11,8 @@
     "test:all:ci": "yarn lint && yarn prettier && yarn test:unit",
     "lint": "ng lint",
     "prettier": "prettier -l './src/**/*.ts'",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "cov": "yarn test:unit --watch=false --code-coverage"
   },
   "private": true,
   "dependencies": {

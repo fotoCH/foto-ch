@@ -1,5 +1,14 @@
 # Relaunch foto-ch
 
+## More info
+[Client](./client/README.md)
+
+[Server](./server/README.md)
+
+[Shared](./shared/README.md)
+
+[DB](./server/db/README.md)
+
 ## Ziel
 Ablösung der bestehenden fotoCH-Plattformen (www und intern) durch aktuelle Technologien. Verbesserung der Performance, bessere Wartbarkeit der Applikationen.
  
