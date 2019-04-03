@@ -1,9 +1,11 @@
 export interface Photographer {
   id: number;
-  firstname: string;
-  lastname: string;
+  tel: string;
+  email: string;
+  photographerType: number;
+  genreTypes: string;
 }
 
 export function getDisplayName(photographer: Photographer): string {
-  return `${photographer.firstname} ${photographer.lastname}`;
+  return `${photographer.tel} ${photographer.email}`;
 }

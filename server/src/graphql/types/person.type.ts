@@ -1,19 +1,19 @@
 import 'reflect-metadata';
 
 import { Field, Int, ObjectType } from 'type-graphql';
+import { Name } from './name.type';
 
 @ObjectType()
-export class Photographer {
+export class Person {
   // @ts-ignore
   @Field(type => Int)
   public id!: number;
 
   @Field({ nullable: true }) public tel?: string;
   
-  @Field({ nullable: true }) public email?: string;
   // @ts-ignore
-  @Field(type => Int, {nullable: true })
-  public photographerType?: number;
+  @Field(type => [Name], { nullable: true }) 
+  public names?: Name[];
   
-  @Field({ nullable: true }) public genreTypes?: string;
+  @Field({ nullable: true }) public email?: string;
 }

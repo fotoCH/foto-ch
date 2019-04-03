@@ -4,9 +4,9 @@ import { list } from './photographer.service';
 describe('#list', () => {
   it('loads all photographers', async () => {
     const photographers = [
-      { id: 0, firstname: 'Jakob', lastname: 'Hunziker' },
-      { id: 1, firstname: 'Paul', lastname: 'Senn' },
-      { id: 2, firstname: 'Jules', lastname: 'Beck' }
+      { id: 1, firstname: 'Peter', lastname: 'Müller', 
+      tel: '0313333333', email: 'example@mail.com', 
+      photographerType: 1, genreTypes: '1;2;3' },
     ];
 
     const result: Photographer[] = await list();
