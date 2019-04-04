@@ -7,5 +7,5 @@ export interface Contact {
 }
 
 export function getDisplayName(contact: Contact): string {
-  return `${contact.tel} ${contact.email}`;
+  return `${contact.name}`;
 }
