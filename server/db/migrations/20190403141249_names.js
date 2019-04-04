@@ -20,7 +20,7 @@ exports.up = function(knex, Promise) {
         {person_id: 2, organization_id: 0, firstname: 'Audrey', lastname: 'Horne', 
          title: 'Ms'}),
       knex('names').insert(
-        {person_id: 1, organization_id: 0, firstname: 'Lorry', lastname: 'Horne', 
+        {person_id: 1, organization_id: 0, firstname: 'Lorry', lastname: 'Palmer', 
          title: 'Ms'})
     ])
 }

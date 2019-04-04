@@ -6,7 +6,7 @@ describe('Person', () => {
     it('returns the display name', () => {
       const person = personFactory.build({
         id: 1,
-        email: '1@m.com'
+        short_bio: '1@m.com'
       });
       expect(getDisplayName(person)).toEqual('1 1@m.com');
     });

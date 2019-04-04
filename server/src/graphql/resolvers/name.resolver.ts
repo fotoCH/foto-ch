@@ -7,7 +7,7 @@ import { Name } from '../types/name.type';
 export class NameResolver {
   // @ts-ignore
   @Query(returns => [Name])
-  public async name(): Promise<Name[]> {
+  public async names(): Promise<Name[]> {
     return listNames();
   }
 }

@@ -4,16 +4,16 @@ import * as app from '../../../src/app';
 describe('GraphQL Api', () => {
   it('lists all persons', async () => {
     const persons = [
-      { id: 0, tel: '0212222222', email: 'qxample@mail.com' },
-      { id: 1, tel: '0312222222', email: 'wxample@mail.com' },
-      { id: 2, tel: '0412222222', email: 'example@mail.com' }
+      { id: 0, awards: 'Some Award', short_bio: 'qxample@mail.com' },
+      { id: 1, awards: 'Some Award', short_bio: 'wxample@mail.com' },
+      { id: 2, awards: 'Some Award', short_bio: 'example@mail.com' }
     ];
 
     const query = {
       query: `
         query {
           persons {
-            id names tel email
+            id names awards short_bio
           }
         }
       `

@@ -1,9 +1,9 @@
 export interface Person {
   id: number;
-  tel: string;
-  email: string;
+  awards: string;
+  short_bio: string;
 }
 
 export function getDisplayName(person: Person): string {
-  return `${person.id} ${person.email}`;
+  return `${person.id} ${person.short_bio}`;
 }

@@ -9,7 +9,6 @@ export async function list(): Promise<Name[]> {
       .then(function(names) {
         resolve(names);
         reject(new Error('Something went wrong at the Name List.'));
-        console.log(names);
       }).catch(function() {
         new Error('Seems like there is a problem with the select.')
       })

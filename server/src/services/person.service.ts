@@ -5,33 +5,18 @@ import * as Db from '../db';
 
 export async function listPersons(): Promise<Person[]> {
   
-  const personPromise = new Promise<Person[]>((resolve, reject) => {  
+  const promise = new Promise<Person[]>((resolve, reject) => {  
     Db.knex('persons').select("*")
       .then(function(persons) {
         resolve(persons);
-        reject(new Error('Seems like there is a problem with the select.'));
-        console.log(persons);
+        reject(new Error('Something went wrong at the Person List.'));
       })
       .catch(function(){
-        console.log("weeee");
+        new Error('Seems like there is a problem with the select.');
       })
-      
-      /*Db.knex('persons')
-        .leftJoin('names', 'persons.id', 'names.person_id')
-        .select([
-          'persons.id as id',
-          'persons.tel as tel',
-          'persons.email as email'
-        ])
-        .groupBy('persons.id')
-        .then(function(persons) {
-          resolve(persons);
-          console.log(persons);
-          reject(new Error('Seems like there is a problem with the select.'));
-        })*/
   });
   
-  return personPromise;
+  return promise;
 }
 
 export async function listNames(personId: number): Promise<Name[]> {
@@ -40,8 +25,10 @@ export async function listNames(personId: number): Promise<Name[]> {
     Db.knex('names').select("*").where({person_id: personId})
       .then(function(names) {
         resolve(names);
-        console.log(names);
-        reject(new Error('Seems like there is a problem with the select.'));
+        reject(new Error('Something went wrong at the Persons Names List.'));
+      })
+      .catch(function(){
+        new Error('Seems like there is a problem with the select.');
       })
   });
   

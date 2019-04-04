@@ -8,7 +8,7 @@ import { Person } from '../types/person.type';
 export class PersonResolver {
   // @ts-ignore
   @Query(returns => [Person])
-  public async person(): Promise<Person[]> {
+  public async persons(): Promise<Person[]> {
     return listPersons();
   }
   

@@ -9,11 +9,11 @@ export class Person {
   @Field(type => Int)
   public id!: number;
 
-  @Field({ nullable: true }) public tel?: string;
+  @Field({ nullable: true }) public awards?: string;
   
   // @ts-ignore
   @Field(type => [Name], { nullable: true }) 
   public names?: Name[];
   
-  @Field({ nullable: true }) public email?: string;
+  @Field({ nullable: true }) public short_bio?: string;
 }
