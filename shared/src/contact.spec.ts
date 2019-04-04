@@ -5,7 +5,7 @@ describe('Contact', () => {
   describe('getDisplayName', () => {
     it('returns the display name', () => {
       const contact = contactFactory.build({
-        name: 'Bruce Willis',
+        name: 'Bruce Willis'
       });
       expect(getDisplayName(contact)).toEqual('Bruce Willis');
     });

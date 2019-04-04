@@ -11,7 +11,7 @@ describe('GraphQL Api', () => {
       query: `
         query {
           names {
-            id firstname lastname title addition
+            id person_id firstname lastname title addition
           }
         }
       `

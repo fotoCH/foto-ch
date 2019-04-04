@@ -40,4 +40,4 @@ Thumbs.db
 /src/config.json
 
 # Knex dev config
-knexfile.js
+knexfile.ts

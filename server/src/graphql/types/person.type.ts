@@ -10,10 +10,12 @@ export class Person {
   public id!: number;
 
   @Field({ nullable: true }) public awards?: string;
-  
+
   // @ts-ignore
-  @Field(type => [Name], { nullable: true }) 
+  @Field(type => [Name], { nullable: true })
   public names?: Name[];
-  
+
+  // tslint:disable-next-line
   @Field({ nullable: true }) public short_bio?: string;
+  // TODO: Introduce CamelCase for API
 }

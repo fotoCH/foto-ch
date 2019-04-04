@@ -7,7 +7,7 @@ describe('GraphQL Api', () => {
       { id: 0, tel: '0512222222', email: 'gu@mail.com', 
        contactType: 1, name: 'Bruce Willis' }
     ];
-
+    
     const query = {
       query: `
         query {

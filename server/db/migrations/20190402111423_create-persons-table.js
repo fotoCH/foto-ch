@@ -11,6 +11,7 @@ exports.up = function(knex, Promise) {
         table.string('short_bio')
         //table.foreign('language_id', 'keyname')
       }),
+      //TODO all data to seeds, shouldn't do this in the migration!
       knex('persons').insert(
         {GND: 101, description: 'some text', birth_date: '2019/11/22', 
          awards: 'Best shot of a cow ever', short_bio: 'Interesting biography'}),

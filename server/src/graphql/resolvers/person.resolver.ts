@@ -1,7 +1,7 @@
 import 'reflect-metadata';
-import { Query, Resolver, FieldResolver, Root } from 'type-graphql';
-import { listPersons as listPersons } from '../../services/person.service';
-import { listNames as listNames } from '../../services/person.service';
+import { FieldResolver, Query, Resolver, Root } from 'type-graphql';
+import { listNames, listPersons } from '../../services/person.service';
+import { Name } from '../types/name.type';
 import { Person } from '../types/person.type';
 
 @Resolver(Person)
@@ -11,11 +11,10 @@ export class PersonResolver {
   public async persons(): Promise<Person[]> {
     return listPersons();
   }
-  
+
   // @ts-ignore
   @FieldResolver()
-  async names(@Root() person: Person) {
+  public async names(@Root() person: Person): Promise<Name[]> {
     return listNames(person.id);
   }
-  
 }

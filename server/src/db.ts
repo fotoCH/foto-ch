@@ -1,6 +1,6 @@
-import * as Knex from 'knex'
+import * as Knex from 'knex';
 
-const config = require('../knexfile')
-const env = process.env.NODE_ENV || 'development'
+const config = require('../knexfile');
+const env = process.env.NODE_ENV || 'development';
 
-export const knex = Knex(config[env])
+export const knex = Knex(config[env]);

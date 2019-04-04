@@ -9,12 +9,12 @@ export class Contact {
   public id!: number;
 
   @Field({ nullable: true }) public name?: string;
-  
+
   @Field({ nullable: true }) public tel?: string;
-  
+
   @Field({ nullable: true }) public email?: string;
-      
+
   // @ts-ignore
-  @Field(type => Int, {nullable: true })
+  @Field(type => Int, { nullable: true })
   public contactType?: number;
 }

@@ -6,5 +6,5 @@ export const contactFactory = Factory.makeFactory<Contact>({
   name: 'Bruce Willis',
   tel: '0313333333',
   email: 'example@mail.com',
-  contactType: 1,
+  contactType: 1
 });
