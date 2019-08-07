@@ -1,0 +1,19 @@
+{
+  "knex": {
+    "client": "postgresql",
+    "connection": {
+      "host": "localhost",
+      "database": "fotoch",
+      "user": "knex",
+      "password": "PkXw8vnMscs18cxMnH"
+    },
+    "pool": {
+      "min": 0,
+      "max": 10
+    }
+  },
+  "dbManager": {
+    "collate": ["en_US.UTF-8"],
+    "superUser": "<your db user>"
+  }
+}

@@ -15,7 +15,5 @@ export class Person {
   @Field(type => [Name], { nullable: true })
   public names?: Name[];
 
-  // tslint:disable-next-line
-  @Field({ nullable: true }) public short_bio?: string;
-  // TODO: Introduce CamelCase for API
+  @Field({ nullable: true }) public shortBio?: string;
 }

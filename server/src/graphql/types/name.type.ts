@@ -8,8 +8,7 @@ export class Name {
   @Field(type => Int)
   public id!: number;
 
-  // tslint:disable-next-line
-  @Field({ nullable: true }) public person_id?: number;
+  @Field({ nullable: true }) public personId?: number;
 
   @Field({ nullable: true }) public firstname?: string;
 

@@ -4740,6 +4740,16 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
+knex-db-manager@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/knex-db-manager/-/knex-db-manager-0.5.0.tgz#30946485276312f3c4862f94089352afa10fa2f2"
+  integrity sha512-UN52j9h6riHV8cMSPEWqMY2FcG/ABjCeuXBX8oN4iRnLtlTsSdjibFosLn22myBXJUr1wMmm6SjHMsL2TQwCaA==
+  dependencies:
+    bluebird "^3.5.1"
+    glob "^7.1.2"
+    knex "^0.16.3"
+    lodash "^4.17.11"
+
 knex@^0.16.3:
   version "0.16.3"
   resolved "https://registry.yarnpkg.com/knex/-/knex-0.16.3.tgz#ca9effd4973655f42b42132b9019b0bc6bd20644"
@@ -6393,6 +6403,11 @@ pg-connection-string@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/pg-connection-string/-/pg-connection-string-2.0.0.tgz#3eefe5997e06d94821e4d502e42b6a1c73f8df82"
   integrity sha1-Pu/lmX4G2Ugh5NUC5CtqHHP434I=
+
+pg-escape@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/pg-escape/-/pg-escape-0.2.0.tgz#65594c1691659b4ab6e0cbbf9d50744be474998e"
+  integrity sha1-ZVlMFpFlm0q24Mu/nVB0S+R0mY4=
 
 pg-int8@1.0.1:
   version "1.0.1"

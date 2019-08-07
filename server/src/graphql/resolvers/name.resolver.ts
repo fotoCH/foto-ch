@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+
 import { Query, Resolver } from 'type-graphql';
 import { list as listNames } from '../../services/name.service';
 import { Name } from '../types/name.type';
